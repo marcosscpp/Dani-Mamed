@@ -1,0 +1,11 @@
+.container {
+  margin: 0 auto;
+  padding: 2.5rem;
+  max-width: 55rem;
+}
+
+@mixin container-md {
+  .container {
+    padding: 2.5rem 1.25rem;
+  }
+}

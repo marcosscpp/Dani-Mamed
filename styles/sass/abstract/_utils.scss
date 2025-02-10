@@ -1,0 +1,66 @@
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.color-golden {
+  color: $golden-400;
+  font-weight: 400;
+}
+
+.golden-border {
+  border: 1px solid $golden-400;
+  border-radius: 1.25rem;
+}
+
+.title {
+  color: $golden-400;
+  font-family: $primary-font;
+  font-size: 2.375rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.gray-bg {
+  background-color: $gray-100;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.gradient-bg {
+  background: linear-gradient(180deg, #f4eee0 40vw, #fffefe 60vw, #f4eee0);
+}
+
+.brand-icon {
+  -webkit-backdrop-filter: blur(4px);
+  background: rgba(#c4c4c4, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  height: 5.5rem;
+  padding: 1.25rem;
+  position: absolute;
+  width: 5.5rem;
+  
+  img {
+    height: 100%;
+    opacity: 0.6;
+    width: 100%;
+  }
+}
+
+@mixin utils-sm {
+  .gradient-bg {
+    background: linear-gradient(180deg, #f4eee0 40%, #fffefe 60%, #f4eee0);
+  }
+}

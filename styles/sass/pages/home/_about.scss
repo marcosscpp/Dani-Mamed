@@ -1,0 +1,59 @@
+.about {
+  padding: 2.5rem 0;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem 4rem;
+  }
+
+  &__content {
+    max-width: 20rem;
+  }
+
+  &__texts {
+    line-height: 1.1;
+    margin: 1rem 0 3rem 0;
+
+    p ~ p {
+      margin-top: .75rem;
+    }
+  }
+
+  &__photo {
+    position: relative;
+    flex: 1;
+    min-width: 24rem;
+  }
+
+
+  &__image {
+    border-radius: $default-radius;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__logo {
+    left: 2rem;
+    top: 25%;
+    width: 50%;
+    position: absolute;
+  }
+}
+
+
+@mixin about-sm {
+  .about {
+    padding: 0;
+    text-align: center;
+
+    &__texts {
+      margin-bottom: 2rem;
+    }
+
+    &__photo {
+      min-width: 5rem;
+    }
+  }
+}

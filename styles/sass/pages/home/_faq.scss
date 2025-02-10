@@ -1,0 +1,56 @@
+.faq {
+  &__content {
+    opacity: 70%;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+
+    padding: 3rem 4rem;
+  }
+
+  &__list {
+    line-height: 1.2;
+  }
+
+  &__question {
+    color: $golden-400;
+
+    & ~ & {
+      margin-top: 0.75rem;
+    }
+  }
+
+  &__answer {
+    color: $gray-700;
+    strong {
+      font-weight: 500;
+    }
+  }
+}
+
+@mixin faq-sm {
+  .faq {
+    &__content {
+      border: 0;
+      padding: 0;
+    }
+
+    &__list {
+      padding-left: 1.25rem;
+    }
+
+    &__title {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    &__question {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+      & ~ & {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

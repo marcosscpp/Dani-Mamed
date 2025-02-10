@@ -1,0 +1,29 @@
+// Fonts 
+$primary-font: "EB Garamond", serif;
+$secondary-font: "Barlow", sans-serif;
+
+
+// Colors
+
+// Brand Colors
+$golden-100: #e7d38c;
+$golden-400: #B88E19;
+$golden-500: #c08f33;
+
+// Grayscale Colors
+$white: #ffffff;
+$gray-100: #faf6ef;
+$gray-700: #3d484e;
+$black: #000000;
+
+// Feedback Colors
+$red-300: #b10b0b;
+
+// Folders Path
+$base-path: "../assets";
+$image-path: "#{$base-path}/images";
+$font-path: "#{$base-path}/fonts";
+$icon-path: "#{$base-path}/icons";
+
+
+$default-radius: 1.25rem;

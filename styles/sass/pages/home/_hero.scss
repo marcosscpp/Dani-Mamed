@@ -1,0 +1,79 @@
+.hero {
+  background: url("#{$image-path}/hero-bg.png") no-repeat top / 100vw;
+  text-align: center;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
+
+  &__logo {
+    width: 14rem;
+  }
+
+  &__headline {
+    font-family: $primary-font;
+    margin: 0 auto;
+    max-width: 40rem;
+
+    strong {
+      display: block;
+    }
+  }
+
+  &__video {
+    margin: -1.5rem 0 -0.5rem 0;
+    position: relative;
+    width: 100%;
+    max-width: 36rem;
+    padding: 4.125rem;
+
+    background: url("#{$image-path}/notebook-video.png") no-repeat;
+    background-size: contain;
+    background-position: center 70%;
+
+    #smartplayer {
+      height: 17.5rem !important;
+
+      .smartplayer-video {
+        background-color: $gray-100 !important;
+        object-fit: cover !important;
+      }
+    }
+  }
+
+  &__description {
+    max-width: 25rem;
+  }
+
+  &__icon {
+    color: $golden-400;
+    font-size: 1.5rem;
+    margin-top: 0.75rem;
+  }
+
+  &__btn {
+    margin-top: 0.5rem;
+  }
+}
+
+@mixin hero-sm {
+  .hero {
+    &__headline {
+      text-wrap: balance;
+    }
+
+    background: none;
+    &__video {
+      background: none;
+      margin: 1.25rem 0;
+      padding: 0;
+      #smartplayer {
+        border-radius: $default-radius !important;
+        height: auto !important;
+      }
+    }
+  }
+}

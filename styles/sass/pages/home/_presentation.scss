@@ -1,0 +1,50 @@
+.presentation {
+  text-align: center;
+  &__container {
+    padding-bottom: 0 !important;
+  }
+
+  &__header {
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    font-family: $primary-font;
+    &--highlight {
+      display: block;
+      font-weight: 600;
+    }
+  }
+
+  &__image {
+    border-radius: $default-radius;
+    height: 22vmax;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__content {
+    font-weight: 500;
+    margin-top: 2rem;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &__description {
+    & ~ & {
+      margin-top: 1.25rem;
+    }
+  }
+
+  &__footer {
+    margin-top: 1.5rem;
+  }
+
+  &__icon {
+    color: $golden-400;
+    font-size: 1.5rem;
+  }
+}

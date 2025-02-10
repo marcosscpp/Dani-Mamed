@@ -1,0 +1,123 @@
+.payment {
+  text-align: center;
+
+  &__container {
+  }
+
+  &__image {
+    margin: 0 auto;
+    width: 22rem;
+  }
+
+  &__box {
+    padding: 4rem 2rem 1rem 2rem;
+    position: relative;
+  }
+
+  &__content {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+
+  &__badge {
+    -webkit-backdrop-filter: blur(8px);
+
+    background: rgba(white, 0.3);
+    backdrop-filter: blur(8px);
+    border-radius: $default-radius;
+    left: 50%;
+    padding: 1.5rem;
+    top: 0;
+    transform: translate(-50%, -50%);
+    width: 8.5rem;
+    position: absolute;
+
+    img {
+      filter: drop-shadow(4px 4px 20px rgba($golden-400, 0.5));
+    }
+
+    &::after {
+      background-color: white;
+      border-radius: 50%;
+      content: "";
+      filter: blur(20px);
+      height: 5rem;
+      position: absolute;
+      pointer-events: none;
+      top: 0;
+      width: 5rem;
+      right: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0rem;
+  }
+
+  &__icon {
+    color: $golden-400;
+    font-size: 1.5rem;
+    margin: 0.625rem 0;
+  }
+
+  &__price {
+    font-size: 1.625rem;
+    line-height: 1.2;
+    font-weight: 300;
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &__methods {
+    margin: 1.25rem auto;
+  }
+
+  footer {
+    strong {
+      font-weight: 500;
+    }
+  }
+}
+
+@mixin payment-sm {
+  .payment {
+    &__container {
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__price {
+      br {
+        display: none;
+      }
+
+      strong {
+        display: block;
+      }
+    }
+
+    &__image {
+      width: 15rem;
+    }
+
+    &__box {
+      border-radius: 0;
+      padding-top: 3rem;
+      padding-bottom: 2.5rem;
+    }
+
+    &__badge {
+      width: 7rem;
+    }
+
+    &__methods {
+      margin: 2rem auto;
+    }
+
+    footer {
+      text-wrap: balance;
+    }
+  }
+}

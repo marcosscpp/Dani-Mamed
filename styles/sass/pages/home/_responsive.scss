@@ -1,0 +1,23 @@
+@include respond-to("md") {
+  @include author-md;
+  @include history-md;
+  @include pros-md;
+  @include container-md;
+  @include main-btn-md;
+}
+
+@include respond-to("sm") {
+  @include utils-sm;
+  @include pros-sm;
+  @include hero-sm;
+  @include testimony-sm;
+  @include calendar-sm;
+  @include payment-sm;
+  @include about-sm;
+  @include faq-sm;
+  @include registration-sm;
+}
+
+@include respond-to("xs") {
+  @include footer-xs;
+}

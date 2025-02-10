@@ -1,0 +1,52 @@
+.main-btn {
+  align-items: center;
+  background: linear-gradient(90deg, $golden-500, $golden-100);
+  box-shadow: 0.5rem 1.25rem 2.5rem rgba($golden-500, 0.6);
+  border-radius: 5rem;
+  color: $white;
+  cursor: pointer;
+  display: flex;
+  font-family: $primary-font;
+  font-weight: 600;
+  gap: 0.5rem;
+  justify-content: center;
+  line-height: 1;
+
+  margin: {
+    left: auto;
+    right: auto;
+    top: 1rem;
+  }
+
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: fit-content;
+
+  &__icon {
+    animation: go-back-right 2s infinite ease-in-out;
+    font-size: 1rem;
+  }
+}
+
+@keyframes go-back-right {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(0.375rem);
+  }
+}
+
+@mixin main-btn-md {
+  .main-btn {
+    font-weight: 700;
+    line-height: 1.5;
+    text-wrap: balance;
+    &__icon {
+      display: none;
+    }
+  }
+}

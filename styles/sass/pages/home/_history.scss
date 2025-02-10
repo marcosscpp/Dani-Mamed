@@ -1,0 +1,119 @@
+.history {
+  padding-bottom: 2rem;
+  &__container {
+    display: flex;
+    gap: 4rem;
+  }
+
+  &__content {
+    max-width: 25rem;
+  }
+
+  &__title {
+    font-family: $primary-font;
+    &--highlight {
+      display: block;
+      font-weight: 600;
+    }
+  }
+
+  &__list {
+    margin: 2.5rem 0;
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    gap: 1.25rem;
+    font-weight: 500;
+
+    & ~ & {
+      margin-top: 1rem;
+    }
+
+    span {
+      font-weight: inherit;
+    }
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__icon {
+    border: 1px solid $golden-400;
+    border-radius: 50%;
+    padding: 0.5rem;
+    width: 3.25rem;
+  }
+
+  &__btn {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &__image {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    & > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0)
+      );
+      pointer-events: none;
+    }
+  }
+  &__brand-icon {
+    bottom: 30%;
+    right: .5rem;
+  }
+}
+
+@mixin history-md {
+  .history {
+    padding: 0;
+    text-align: center;
+    &__container {
+      align-items: center;
+      flex-direction: column;
+      padding-bottom: 0 !important;
+    }
+
+    &__content {
+      max-width: 22rem;
+    }
+
+    &__list {
+      margin: 1.5rem 0;
+    }
+
+    &__item {
+      flex-direction: column;
+    }
+
+    &__image {
+      max-width: 16rem;
+      margin: 0 auto;
+    }
+
+    &__btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

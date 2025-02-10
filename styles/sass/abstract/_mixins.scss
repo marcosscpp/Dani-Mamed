@@ -1,0 +1,29 @@
+@mixin respond-to($breakpointMax, $breakpointMin: null) {
+  @if $breakpointMin {
+    @media (min-width: map-get($breakpoints, $breakpointMin)) and (max-width: map-get($breakpoints, $breakpointMax)) {
+      @content;
+    }
+  } @else {
+    @media (max-width: map-get($breakpoints, $breakpointMax)) {
+      @content;
+    }
+  }
+}
+
+
+@mixin font-face(
+  $font-name,
+  $file-name,
+  $weight: normal,
+  $style: normal,
+  $format: "otf"
+) {
+  @font-face {
+    font-family: #{$font-name};
+    src: url("#{$font-path}/#{$file-name}.#{$format}")
+      format(if($format == "ttf", "truetype", "opentype"));
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}

@@ -1,0 +1,66 @@
+.testimony {
+  text-align: center;
+  &__header {
+    margin-bottom: 1.5rem;
+  }
+
+  &__title {
+    font-family: $primary-font;
+    &--highlight {
+      display: block;
+      font-weight: 600;
+    }
+  }
+
+  &__description {
+    margin: 0 auto;
+    max-width: 24rem;
+    font-weight: 500;
+  }
+
+  &__icon {
+    color: $golden-400;
+    font-size: 1.5rem;
+    margin-top: 1.25rem;
+  }
+
+  &__list {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 4rem;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    background-color: $white;
+    max-width: 14rem;
+    padding: 1.5rem 0.5rem;
+  }
+
+  &__rating {
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    color: $golden-400;
+    font-size: 0.625rem;
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  &__text {
+    font-weight: 500;
+    padding: 0 1.25rem;
+  }
+}
+
+@mixin testimony-sm {
+  .testimony__item {
+    max-width: none;
+  }
+}

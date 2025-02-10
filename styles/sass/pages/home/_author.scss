@@ -1,0 +1,101 @@
+.author {
+  &__container {
+    align-items: flex-start;
+    display: flex;
+    gap: 0 8rem;
+  }
+
+  &__content {
+    margin-top: 1.25rem;
+    max-width: 23rem;
+  }
+
+  &__title {
+    font-family: $primary-font;
+    &--highlight {
+      font-size: 1.5rem;
+      display: block;
+      font-weight: 600;
+    }
+  }
+
+  &__texts {
+    margin: 2.5rem 0;
+  }
+
+  &__text ~ &__text {
+    display: block;
+    margin-top: 1.25rem;
+  }
+
+  &__image {
+    border-radius: $default-radius;
+    display: inline-block;
+    height: 26rem;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+
+    & > img {
+      display: block;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  
+  &__brand-icon {
+    right: 1.5rem;
+    top: 1.25rem;
+  }
+
+  strong {
+    font-weight: 500;
+  }
+
+  &__btn {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@mixin author-md {
+  .author {
+    text-align: center;
+
+    &__container {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__content {
+      max-width: 22rem;
+    }
+
+    &__image {
+      flex: auto;
+      height: 30rem;
+      max-width: none;
+      width: 100%;
+      max-width: 26rem;
+      margin: 0 auto;
+
+      & > img {
+        object-position: center -2rem;
+      }
+    }
+
+    &__title--highlight {
+      margin-bottom: 0;
+    }
+
+    &__texts {
+      margin: 1.5rem auto;
+    }
+
+    &__btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

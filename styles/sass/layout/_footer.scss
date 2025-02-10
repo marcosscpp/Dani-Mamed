@@ -1,0 +1,65 @@
+.footer {
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    text-align: center;
+    padding: {
+      bottom: 1rem;
+      top: 1rem;
+    }
+  }
+
+  &__logo {
+    width: 12rem;
+  }
+
+  &__infos {
+    &-item {
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__btn {
+    $animation-hover-duration: 0.3s;
+    $button-color: $golden-400;
+    background: transparent;
+    border: 2px solid $button-color;
+    border-radius: 1rem;
+    color: $button-color;
+    cursor: pointer;
+    font-size: 0.75rem;
+    margin: 0.5rem 0;
+    padding: 0.25rem;
+    transition: color $animation-hover-duration ease,
+      background $animation-hover-duration ease;
+
+    &:hover {
+      background: $button-color;
+      color: $white;
+    }
+  }
+
+  &__credits {
+    background: linear-gradient(90deg, $golden-100, $golden-500);
+    padding: .5rem;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+@mixin footer-xs {
+  .footer {
+    &__infos-item {
+      margin: 0.5rem;
+      strong {
+        display: block;
+      }
+    }
+  }
+}
